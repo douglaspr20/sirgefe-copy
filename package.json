@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"next dev -p 3002\" \"tailwindcss --input ./src/css/input.css --output ./src/css/base.css --watch\"",
+    "prebluild": "echo \"//npm.pkg.github.com/:_authToken=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\" >> .npmrc && echo \"@sirge-io:registry=https://npm.pkg.github.com\" >> .npmrc",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
