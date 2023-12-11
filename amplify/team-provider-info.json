@@ -1,0 +1,15 @@
+{
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sirgebusinessfenext-main-192015-authRole",
+      "UnauthRoleArn": "arn:aws:iam::562168406968:role/amplify-sirgebusinessfenext-main-192015-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::562168406968:role/amplify-sirgebusinessfenext-main-192015-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-sirgebusinessfenext-main-192015-deployment",
+      "UnauthRoleName": "amplify-sirgebusinessfenext-main-192015-unauthRole",
+      "StackName": "amplify-sirgebusinessfenext-main-192015",
+      "StackId": "arn:aws:cloudformation:us-west-2:562168406968:stack/amplify-sirgebusinessfenext-main-192015/32ee7950-2ff0-11ee-9701-026a26c1c2bf",
+      "AmplifyAppId": "d33gb3az0vn9up"
+    }
+  }
+}

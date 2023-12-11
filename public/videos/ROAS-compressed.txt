@@ -1,0 +1,37 @@
+﻿@ This file written with the Avid Caption plugin, version 1
+
+<begin subtitles>
+00:00:00:00 00:00:00:11
+ROAS.
+
+00:00:00:22 00:00:05:16
+ROAS is an acronym that stands
+for return on ad spend.
+
+00:00:05:19 00:00:10:11
+A simple way to understand ROAS
+is if I spend $10 on an ad and
+
+00:00:10:12 00:00:15:01
+I see $100 in purchases from
+people who have clicked on that
+
+00:00:15:03 00:00:19:16
+ad, my ROAS is 10x because I've
+made 10 times more in profit
+
+00:00:19:16 00:00:21:21
+than I spent on that ad.
+
+00:00:22:05 00:00:24:19
+ROAS is one of several
+important metrics that search
+
+00:00:24:19 00:00:27:19
+helps you track in order to
+understand which ads are
+
+00:00:27:19 00:00:29:13
+working and which ads are not.
+
+<end subtitles>

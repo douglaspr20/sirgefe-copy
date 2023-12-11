@@ -1,0 +1,26 @@
+<begin subtitles>
+
+00:00:01:00 00:00:04:05
+Welcome to Sirge, your e-commerce companion.  
+
+
+
+00:00:04:07 00:00:06:08
+We are so excited to have you here.  
+
+00:00:06:00 00:00:10:00
+We have a few quick steps to walk through to finish your setup.  
+
+00:00:10:00 00:00:13:00
+This screen displays the connection to your Shopify store.  
+
+00:00:13:00 00:00:17:00
+We pulled in your email, time zone, and currency from Shopify.  
+
+00:00:17:00 00:00:21:00
+If you'd like to change your store name, go ahead and edit the title field now.  
+
+00:00:21:00 00:00:24:00
+If not, click continue to move to the next step.  
+
+<end subtitles>

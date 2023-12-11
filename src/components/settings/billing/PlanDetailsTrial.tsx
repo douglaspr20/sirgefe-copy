@@ -1,0 +1,100 @@
+import { useBusinessProfileContext } from '@providers/businessProfileProvider';
+import { formatDateNoTime } from '@utils/format';
+import dayjs from 'dayjs';
+import Image from 'next/image';
+import React from 'react';
+
+const PlanDetailsTrial = () => {
+  const { selectedBusiness } = useBusinessProfileContext();
+  const [trialLeft, setTrialLeft] = React.useState(0);
+  const [trialTotal, setTrialTotal] = React.useState(0);
+
+  React.useEffect(() => {
+    setTrialLeft(
+      dayjs(selectedBusiness?.subscription?.trial_end as string).diff(
+        dayjs(),
+        'day',
+      ) + 1,
+    );
+    setTrialTotal(
+      dayjs(selectedBusiness?.subscription?.trial_end as string).diff(
+        dayjs(
+          selectedBusiness?.subscription
+            ?.current_billing_period_start as string,
+        ),
+        'day',
+      ) + 1,
+    );
+  }, [selectedBusiness]);
+
+  return (
+    <div>
+      <div className="flex py-3 mb-3 items-center justify-between border-bottom-darkgrey">
+        <div className="flex items-center">
+          <div className="ml-2">
+            <h2 className="h5 ">Plan</h2>
+          </div>
+        </div>
+        <div className="flex items-center">
+          <button
+            className="link inline-flex items-center font-medium"
+            data-bs-toggle="modal"
+            data-bs-target="#exploreTiers"
+          >
+            Explore tiers
+          </button>
+        </div>
+      </div>
+      <div className="py-3 mb-3 items-center justify-between border-bottom-darkgrey">
+        <p className="text-primaryColor ml-1">
+          {trialLeft < 0 ? 0 : trialLeft} / {trialTotal} days left in free trial
+        </p>
+        <div className="mt-1 flex w-full h-6 bg-darkGrade25 rounded-full overflow-hidden">
+          <div
+            className="flex flex-col justify-center overflow-hidden bg-primaryColor text-xs text-white text-center"
+            role="progressbar"
+            style={{
+              width: `${(trialLeft / trialTotal) * 100}%`,
+            }}
+          ></div>
+        </div>
+        <div className="py-3 mb-3 items-center justify-between grid grid-cols-2 grid-rows-3 w-max gap-x-4 gap-y-1">
+          <p className="text-textSecondaryColor">End of free trial</p>
+          <p>
+            {formatDateNoTime(
+              selectedBusiness?.subscription?.trial_end as string,
+            ) || 'N/A'}
+          </p>
+          <p className="text-textSecondaryColor">Billing period starts</p>
+          <p>
+            {formatDateNoTime(
+              selectedBusiness?.subscription
+                ?.current_billing_period_start as string,
+            ) || 'N/A'}
+          </p>
+          <p className="text-textSecondaryColor">Billing period ends</p>
+          <p>
+            {formatDateNoTime(
+              selectedBusiness?.subscription
+                ?.current_billing_period_end as string,
+            ) || 'N/A'}
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Image
+            src="/images/info-icon.svg"
+            alt="info"
+            width={20}
+            height={18.5}
+          />
+          <p className="text-textSecondaryColor text-xs font-bold">
+            Once the free trial ends, we&apos;ll start calculating your shop
+            revenue along with current month price.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PlanDetailsTrial;

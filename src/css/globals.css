@@ -1,0 +1,358 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+label[data-bs-toggle]:hover > .popover {
+  opacity: 1;
+}
+
+/* We can resend the mail or you can try later */
+
+.bg-blue-500 {
+  background-color: rgba(50, 196, 212, 1);
+}
+
+.bg-blue-100 {
+  background-color: rgba(231, 251, 253, 1);
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    160deg,
+    rgba(99, 184, 205, 1) 0%,
+    rgba(67, 194, 208, 1) 50%,
+    rgba(213, 147, 204, 1) 100%
+  );
+}
+
+.text-blue-600 {
+  color: rgba(50, 196, 212, 1);
+}
+
+.border-gray-300 {
+  border-color: rgb(209 213 219/1);
+}
+
+.text-gray-500 {
+  color: rgb(107 114 128/1);
+}
+
+.text-gray-400 {
+  color: rgb(156 163 175/1);
+}
+
+.cursor-resize:hover {
+  cursor: col-resize;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.table-resizable {
+  min-width: 1400px !important;
+}
+
+.table-lg-resizable {
+  min-width: 2250px !important;
+}
+
+div.footerDatePicker {
+  padding: 10px;
+}
+div.footerDatePicker div:first-child {
+  color: rgba(50, 196, 212, 1);
+}
+
+div.footerDatePicker div button {
+  margin-left: auto;
+  width: 135px;
+  height: 36px;
+}
+
+div.transition-all.ease-out.duration-300.absolute.z-10 {
+  z-index: 1000;
+}
+
+.trucate-text {
+  width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.relative.w-full.text-gray-700
+  > button.absolute.right-0.h-full.px-3.text-gray-400 {
+  display: none;
+}
+
+/* Estilo por defecto del checkbox */
+input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Estilo del checkbox cuando está marcado */
+input[type='checkbox']:checked {
+  background-color: #32c4d5;
+  border-color: #32c4d5;
+}
+
+input[type='checkbox']:checked::before {
+  content: '\2713';
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+}
+/** resize performance table */
+
+.w-sidebar-screen {
+  width: 92vw;
+}
+
+.performance-column-tooltip {
+  max-width: 850px !important;
+  top: 58px !important;
+}
+
+.step-width {
+  width: 50px;
+  height: 50px;
+}
+/** utm width ***/
+.utm-w-modal {
+  min-width: 676px !important;
+}
+
+@media (max-width: 1250px) {
+  .flex-col-1250 {
+    flex-direction: column;
+  }
+
+  .flex-col-1250 .widget-container {
+    width: 100%;
+  }
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+
+html {
+  overflow: hidden;
+}
+
+.custom-z-drawer {
+  z-index: 1000;
+}
+
+.logic-switcher .logic-switcher__item input {
+  opacity: 0 !important;
+}
+
+.selected-performance-name {
+  color: #551a8b;
+}
+
+/**
+
+analytics best performing and comparision section animation
+
+**/
+
+.image-wrapper {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.items {
+  position: absolute;
+  top: 246px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  background-color: #fff;
+  padding-top: 8px;
+}
+
+.image-wrapper:hover .items {
+  transform: translateY(50%);
+}
+
+.image-wrapper:hover .comparison-image {
+  opacity: 1;
+}
+
+.carousel .rating__item {
+  min-width: 10px !important;
+}
+
+.image-wrapper:hover .rating__item,
+.carousel:hover .rating__item {
+  margin-right: 0.125rem;
+  min-width: 10px !important;
+}
+
+.carousel {
+  width: 345px;
+}
+
+.carousel .slide {
+  margin-right: 12px !important;
+}
+
+.carousel:hover .slide {
+  width: 96% !important;
+  transition: 0.5s;
+}
+
+.carousel ul {
+  background-color: #fff !important;
+}
+
+.carousel li {
+  text-align: left !important;
+  min-width: 62% !important;
+}
+
+.carousel:hover li {
+  min-width: 94% !important;
+  margin-right: 8px;
+}
+
+.carousel .slider-wrapper.axis-horizontal .slider .slide {
+  background-color: #fff !important;
+}
+
+.carousel img {
+  width: 240px !important;
+  height: 100%;
+}
+
+.carousel:hover img {
+  width: 350px !important;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 1930px) {
+  .carousel {
+    width: 100%;
+    max-width: 450px !important;
+  }
+
+  .carousel img {
+    width: 300px !important;
+  }
+
+  .carousel li {
+    min-width: 60% !important;
+  }
+
+  .carousel:hover li {
+    min-width: 86% !important;
+    margin-right: 8px;
+  }
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  /* Vertically centers the content */
+}
+
+label {
+  display: flex;
+  align-items: center;
+  /* Vertically centers the checkbox with the label text */
+}
+
+input[type='checkbox'] {
+  margin-right: 5px;
+  /* Add some space between the checkbox and the text */
+}
+/** connect selectively ads custom style **/
+
+@media screen and (min-height: 700px) {
+  .custom-select-list-h {
+    max-height: 90px;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .custom-select-list-h {
+    max-height: 200px;
+  }
+}
+
+a:hover .custom-icon {
+  fill: #5f666d
+}
+
+a:hover .custom-icon.active, .custom-icon.active {
+  fill:  #32c4d4
+}
+
+.select-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  /* display: none; */
+}
+
+.select-scrollbar::-webkit-scrollbar-thumb {
+  background: #A1B3C4;
+  border-radius: 4px;
+  width: 3px;
+  height: 43px;
+}
+
+.query-table th{
+  background: #FCFCFC;
+  padding: 12px 8px 12px 8px;
+  font-weight: 500;
+
+}
+.query-table td{
+  padding: 12px 8px 12px 8px;
+
+}
+.query-table table,.query-table th,.query-table td {
+    border: 1px solid #EBEFF3;
+    border-collapse: collapse;
+
+}
+.onStatusHover:hover ~.status-shadow{
+  display: flex;
+}
+
+.status-shadow{
+  box-shadow: 0px 4px 16px 0px #1F3A5A26;
+  border-radius: 6px;
+  padding: 8px 12px 8px 12px;
+  border: 1px solid #EBEFF3;
+  display: none;
+
+}
+.sticky-row{
+  box-shadow: 0px -2px 16px 0px #0000000D;
+  border-bottom-width:0;
+  background-color: #EBEFF3;
+  font-weight: 500;
+  font-size: 16px;
+  color: #5F666D  ;
+}
+
+.sticky-row td{
+  border: 1px solid #EBEFF3
+
+
+}

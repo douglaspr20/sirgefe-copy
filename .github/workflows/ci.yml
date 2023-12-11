@@ -1,0 +1,31 @@
+name: Tests
+
+on:
+  push:
+    branches: [main, prod]
+  pull_request:
+    branches: [prod, main]
+
+jobs:
+  tests:
+    runs-on: self-hosted
+    name: Tests on Node 18
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v3
+
+      - name: Set Node.js
+        uses: actions/setup-node@v3.5.1
+        with:
+          node-version: '18'
+          registry-url: https://npm.pkg.github.com
+          cache-dependency-path: package-lock.json
+        env:
+          RUNNER_TEMP: '/tmp/'
+
+      - name: Install Node Modules
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Run Tests
+        run: npm run eslint:graphql

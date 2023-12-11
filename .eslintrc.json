@@ -1,0 +1,40 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-console": "warn",
+    "eqeqeq": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.graphql"],
+      "parser": "@graphql-eslint/eslint-plugin",
+      "plugins": ["@graphql-eslint"],
+      "parserOptions": {
+        "skipGraphQLConfig": true
+      },
+      "extends": ["plugin:@graphql-eslint/schema-recommended"],
+      "rules": {
+        // Rules that required a parserOptions Schema
+        "@graphql-eslint/no-unreachable-types": "off",
+        "@graphql-eslint/strict-id-in-types": "off",
+        "@graphql-eslint/known-argument-names": "off",
+        "@graphql-eslint/known-directives": "off",
+        "@graphql-eslint/known-type-names": "off",
+        // Rules That are too late to use in the file
+        "@graphql-eslint/provided-required-arguments": "off",
+        "@graphql-eslint/unique-directive-names-per-location": "off",
+        "@graphql-eslint/require-description": "off",
+        "@graphql-eslint/naming-convention": "off",
+        "@graphql-eslint/no-typename-prefix": "off",
+        "@graphql-eslint/no-hashtag-description": "off"
+      }
+    }
+  ]
+}
